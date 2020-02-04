@@ -1,0 +1,141 @@
+{
+    "platform": {
+        "uuid": "example_platform",
+        "applicationIcon": "https://openfin.github.io/golden-prototype/favicon.ico",
+        "providerUrl": "https://dhamberlin.github.io/of-custom-platform-provider/",
+        "autoShow": true,
+        "defaultWindowOptions": {
+            "cornerRounding": {
+                "height": 20,
+                "width": 20
+            },
+            "contextMenu": true
+        }
+    },
+    "snapshot": {
+        "windows": [
+            {
+                "name": "window_A-2",
+                "defaultWidth": 600,
+                "defaultHeight": 600,
+                "saveWindowState": false,
+                "backgroundThrottling": true,
+                "url": "https://tomer-openfin.github.io/custom-frame/custom-frame.html",
+                "layout": {
+                    "content": [
+                        {
+                            "type": "stack",
+                            "id": "no-drop-target",
+                            "content": [
+                                {
+                                    "type": "component",
+                                    "componentName": "view",
+                                    "componentState": {
+                                        "name": "component_A1-2",
+                                        "showDevTools": true,
+                                        "url": "about:blank"
+                                    }
+                                },
+                                {
+                                    "type": "component",
+                                    "componentName": "view",
+                                    "componentState": {
+                                        "name": "component_A2-2",
+                                        "showDevTools": true,
+                                        "url": "https://cdn.openfin.co/embed-web/chart.html"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "window_B-2",
+                "defaultWidth": 600,
+                "defaultHeight": 600,
+                "saveWindowState": false,
+                "backgroundThrottling": true,
+                "layout": {
+                    "content": [
+                        {
+                            "type": "stack",
+                            "id": "no-drop-target",
+                            "content": [
+                                {
+                                    "type": "component",
+                                    "componentName": "view",
+                                    "componentState": {
+                                        "name": "component_B1",
+                                        "showDevTools": true,
+                                        "url": "https://www.tradingview.com/chart/?symbol=NASDAQ:AAPL"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "window_C",
+                "defaultWidth": 600,
+                "defaultHeight": 600,
+                "saveWindowState": false,
+                "layout": {
+                    "content": [
+                        {
+                            "type": "row",
+                            "content": [
+                                {
+                                    "type": "column",
+                                    "content": [
+                                        {
+                                            "type": "component",
+                                            "componentName": "view",
+                                            "componentState": {
+                                                "name": "component_C",
+                                                "showDevTools": true,
+                                                "url": "https://cdn.openfin.co/embed-web/chart.html"
+                                            }
+                                        },
+                                        {
+                                            "type": "component",
+                                            "componentName": "view",
+                                            "componentState": {
+                                                "name": "component_D",
+                                                "url": "https://openfin.github.io/golden-prototype/view-form.html"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "column",
+                                    "content": [
+                                        {
+                                            "type": "component",
+                                            "componentName": "view",
+                                            "componentState": {
+                                                "name": "component_E",
+                                                "url": "https://cryptowat.ch/markets/kraken/btc/usd"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "runtime": {
+        "arguments": "--inspect --v=1",
+        "version": "canary"
+    },
+    "shortcut": {
+        "company": "OpenFin",
+        "description": "Desktop-native jquery",
+        "icon": "\\\\Mac\\Home\\Downloads\\ico-icon-ghost.jpg",
+        "name": "GoldenFin"
+    }
+}
