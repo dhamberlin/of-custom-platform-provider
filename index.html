@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log('yee');
+        fin.System.showDeveloperTools(fin.me);
+        fin.Platform.init(async (Provider) => {
+
+            class Override extends Provider {
+                async getSnapshot() {
+                    const snapshot = await super.getSnapshot();
+                    return { ...snapshot, trev: 'sue' };
+                }
+                async applySnapshot({ snapshot }) {
+                    snapshot.windows = [snapshot.windows.pop()];
+                    super.applySnapshot({ snapshot });
+                }
+            }
+            return new Override();
+        });
+    </script>
+</body>
+
+</html>
