@@ -10,21 +10,21 @@
 
 <body>
     <script>
-        console.log('yee');
-        fin.System.showDeveloperTools(fin.me);
-        fin.Platform.init(async (Provider) => {
+        fin.Platform.init({
+                overrideCallback: async (Provider) => {
 
-            class Override extends Provider {
-                async getSnapshot() {
-                    const snapshot = await super.getSnapshot();
-                    return { ...snapshot, trev: 'sue' };
+                class Override extends Provider {
+                    async getSnapshot() {
+                        const snapshot = await super.getSnapshot();
+                        return { ...snapshot, trev: 'sue' };
+                    }
+                    async applySnapshot({ snapshot }) {
+                        snapshot.windows = [snapshot.windows.pop()];
+                        super.applySnapshot({ snapshot });
+                    }
                 }
-                async applySnapshot({ snapshot }) {
-                    snapshot.windows = [snapshot.windows.pop()];
-                    super.applySnapshot({ snapshot });
-                }
+                return new Override();
             }
-            return new Override();
         });
     </script>
 </body>
